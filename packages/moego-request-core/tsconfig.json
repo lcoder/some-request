@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "baseUrl": ".",
+    "target": "ES5",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
+}

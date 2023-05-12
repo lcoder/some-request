@@ -1,0 +1,27 @@
+{
+  "name": "@moego/moego-request-core",
+  "version": "2.0.0-beta.20220317133803.0",
+  "description": "core-package",
+  "module": "es/index.js",
+  "main": "lib/index.js",
+  "types": "es/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "postinstall": "if [ ! -d 'es' ]; then pnpm build; fi",
+    "watch": "yarn build -w",
+    "prepublishOnly": "pnpm build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "rollup": "^2.58.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0"
+  },
+  "peerDependencies": {
+    "rxjs": "^7.4.0"
+  }
+}

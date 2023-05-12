@@ -1,0 +1,29 @@
+{
+  "name": "@moego/moego-request-plugin-sc",
+  "version": "1.0.0-beta.20220314105601.0",
+  "description": "moe-request请求发送到sc插件",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "postinstall": "if [ ! -d 'es' ]; then pnpm build; fi",
+    "build:watch": "yarn build -w",
+    "prepublishOnly": "pnpm build"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "rxjs": "^7.4.0",
+    "@moego/moego-request-core": "workspace:^"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "rollup": "^2.58.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "@moego/moego-request-core": "workspace:^"
+  }
+}

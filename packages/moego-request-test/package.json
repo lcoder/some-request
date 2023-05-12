@@ -1,0 +1,67 @@
+{
+  "name": "@moego/moego-request-test",
+  "private": true,
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@craco/craco": "^6.4.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-config": "^5.0.3",
+    "@types/react-router-dom": "^5.3.2",
+    "@moego/moego-request-core": "workspace:^",
+    "@moego/moego-request-plugin-awesome": "workspace:^",
+    "@moego/moego-request-plugin-cache": "workspace:^",
+    "@moego/moego-request-plugin-sc": "workspace:^",
+    "antd": "^4.16.13",
+    "body-parser": "^1.19.0",
+    "craco-alias": "^3.0.1",
+    "craco-less": "^1.20.0",
+    "raw-loader": "^4.0.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "rxjs-hooks": "^0.7.0",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.ts?(x)"
+        ],
+        "rules": {
+          "import/no-webpack-loader-syntax": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

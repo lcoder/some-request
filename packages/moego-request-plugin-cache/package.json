@@ -1,0 +1,33 @@
+{
+  "name": "@moego/moego-request-plugin-cache",
+  "version": "1.0.0-beta.20220314105405.0",
+  "description": "moe-request缓存插件",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "postinstall": "if [ ! -d 'es' ]; then pnpm build; fi",
+    "watch": "yarn build -w",
+    "prepublishOnly": "pnpm build"
+  },
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "@moego/moego-request-core": "workspace:^",
+    "rxjs": "^7.4.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@moego/moego-request-core": "workspace:^",
+    "rollup": "^2.58.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "@types/lru-cache": "^5.1.1"
+  },
+  "dependencies": {
+    "lru-cache": "^6.0.0"
+  }
+}
